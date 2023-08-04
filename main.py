@@ -26,7 +26,7 @@ class CBNC:
         except e:
             return e                
     
-    # def dailyCalConsumption(self):
+    def dailyCalConsumption(self):
 
 # driver code
 if __name__ == "__main__":
