@@ -69,7 +69,13 @@ if __name__ == "__main__":
     print("\t\t\t\tChild Nutrients Calculator\n\n")
 
     cName = input("Enter your child's name : ")
-    cAge = int(input("Enter your child's age : "))
+    while True:
+        cAge = int(input("Enter your child's age : "))
+        if(cAge>=0 and cAge<=8):
+            break
+        else:
+            print("The age must be between 0-8 years")
+            continue
     cGender = input("Enter your child's gender : ")
     cHeight = int(input("Enter your child's Height (in inches): "))
     cWeight = int(input("Enter your child's weight (in pounds): "))
@@ -81,9 +87,8 @@ if __name__ == "__main__":
     mealCount = int(input("Enter meal counts :  "))
     print("\n\n")
 
-    tempMealDataCount = 1
     meal_data = {
-        input(f"Enter the {tempMealDataCount}st meal : ").capitalize(): float(input("Enter the quantity in grams(g): "))
+        input(f"Enter the meal name : ").capitalize(): float(input("Enter the quantity in grams(g): "))
         for _ in range(mealCount)
     }
 
